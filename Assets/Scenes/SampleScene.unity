@@ -134,10 +134,9 @@ GameObject:
   - component: {fileID: 64091356}
   - component: {fileID: 64091355}
   - component: {fileID: 64091354}
-  - component: {fileID: 64091358}
   m_Layer: 0
   m_Name: Cube
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -222,24 +221,12 @@ Transform:
   m_GameObject: {fileID: 64091353}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.7, y: 1, z: 21.1}
+  m_LocalPosition: {x: 17.7, y: 1, z: 8.6}
   m_LocalScale: {x: 14.582, y: 1, z: 5}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &64091358
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 64091353}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 03814e3b2737eac499c5236617ffceaf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &138155616 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7903082156866138479, guid: 934f5d5380cc4ec498b55ad63b8c5e7e, type: 3}
@@ -284,6 +271,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e738a28793bc81468cc724f5a8815c4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bounceForce: 300
 --- !u!1001 &199416283
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -303,6 +291,10 @@ PrefabInstance:
     - target: {fileID: 3019062465132900232, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
       propertyPath: m_Name
       value: Wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3019062465132900232, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
       objectReference: {fileID: 0}
     - target: {fileID: 5695440246629931983, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
       propertyPath: m_Constraints
@@ -468,6 +460,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 3019062465132900232, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8938732470315408808, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 30
@@ -618,6 +614,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Wall
       objectReference: {fileID: 0}
+    - target: {fileID: 3019062465132900232, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
+      propertyPath: m_TagString
+      value: Wall
+      objectReference: {fileID: 0}
     - target: {fileID: 8938732470315408808, guid: 94e2c91c2910bfa4a8da4b9025990c37, type: 3}
       propertyPath: m_LocalPosition.x
       value: -30
@@ -733,6 +733,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
+    - target: {fileID: 2718285158176066805, guid: eb6f03dd8bf07484fb7f35a4e8c04c37, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     - target: {fileID: 6389498403165582081, guid: eb6f03dd8bf07484fb7f35a4e8c04c37, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -776,6 +780,10 @@ PrefabInstance:
     - target: {fileID: 6972733692133808597, guid: eb6f03dd8bf07484fb7f35a4e8c04c37, type: 3}
       propertyPath: m_Constraints
       value: 124
+      objectReference: {fileID: 0}
+    - target: {fileID: 7894649880342958126, guid: eb6f03dd8bf07484fb7f35a4e8c04c37, type: 3}
+      propertyPath: playerSpeed
+      value: 50
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

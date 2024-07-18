@@ -22,36 +22,6 @@ public class PlayerMovement : MonoBehaviour
         ProcessInput();
     }
 
-    private void OnCollisionEnter(Collision other)
-    {
-        Debug.Log("OnCollisionEnter");
-
-        if(other.gameObject.name == "Ball") // "other.gameObject" is the object you collided on
-        {
-            GetComponent<MeshRenderer>().material.color = Color.blue;
-            
-            // get ball object
-            var ball = other.gameObject;
-            var rbBall = ball.GetComponent<Rigidbody>();
-            
-            // get ball movement vector
-            // var ballVector = other.relativeVelocity;
-            
-            // reflect vector
-            // Makes the reflected object appear opposite of the original object,
-            // mirrored along the z-axis of the world
-            // var reflectedVector = Vector3.Reflect(ballVector, Vector3.up);
-
-
-            rbBall.AddRelativeForce(0f, 0f, -300f);
-            //rbBall.AddRelativeForce(reflectedVector);
-            
-            Debug.Log(ball.name);
-            
-            //gameObject.tag = "Hit"; // gameObject is the object which this script belongs
-        }
-    }
-
     private void ProcessInput()
     {
         if (Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow))
